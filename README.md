@@ -1,6 +1,6 @@
 ###################################
 注：请比赛方复现程序时，将工作路径cd到 panda_project/code/mmdetection-master后再运行，
-							否则相对路径会报错！
+否则相对路径会报错！
 ###################################
 
 运行环境：python=3.7.10 torch=1.7.1 torchvision=0.8.2 opencv=4.5.1 MMCV=1.2.7 mmdetection=2.10.0+     cuda-10.2
