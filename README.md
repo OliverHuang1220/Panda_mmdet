@@ -35,7 +35,7 @@ RESULT_PATH = '../../prediction_result/'  # 保存结果路径
 加载的训练好的四个类别的模型位于 ./checkpoints/cascade_rcnn50_dcn_giou_pth
 
 ## Result
-RankB
+B榜
 Score | Rank
 0.534 |34
 ## Acknowlegement
