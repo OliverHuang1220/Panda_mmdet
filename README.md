@@ -23,7 +23,7 @@ python cascade_rcnn50_dcn_train/vehicle_dir/cascade_rcnn_r50_fpn_dconv_c3-c5_1x_
 
 
 ## Test
-cd到 panda_project/code/mmdetection-master 工作路径后，运行run.sh（默认是0号卡，如需改动直接修改run.sh文件中的 CUDA_VISIBLE_DEVICES= ）
+cd到 panda_project/code/mmdetection-master 工作路径后，运行run.sh（默认是0号卡，如需改动直接修改run.sh文件中的 CUDA_VISIBLE_DEVICES=''）
 运行结果自动保存到../../prediction_result/
 run.sh自动运行test.py文件
 IMAGE_ROOT = '../../tcdata/Test/'     #训练集图片路径
