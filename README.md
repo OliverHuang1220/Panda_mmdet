@@ -36,4 +36,4 @@ RESULT_PATH = '../../prediction_result/'  # 保存结果路径
 
 
 ## Acknowlegement
-This repo obtained from [MMdet](https://github.com/open-mmlab/mmdetection) and [Pand-Toolkit]https://github.com/GigaVision/PANDA-Toolkit
+This repo obtained from [MMdet](https://github.com/open-mmlab/mmdetection) and [Pand-Toolkit](https://github.com/GigaVision/PANDA-Toolkit)
