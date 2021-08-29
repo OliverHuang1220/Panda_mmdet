@@ -36,4 +36,4 @@ RESULT_PATH = '../../prediction_result/'  # 保存结果路径
 
 
 ## Acknowlegement
-This repo obtained from MMdet(https://github.com/open-mmlab/mmdetection)
+This repo obtained from [MMdet](https://github.com/open-mmlab/mmdetection)
