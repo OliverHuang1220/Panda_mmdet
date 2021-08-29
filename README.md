@@ -1,5 +1,5 @@
 ###################################
-注：请比赛方复现程序时，将工作路径cd到 panda_project/code/mmdetection-master后再运行，
+将工作路径cd到 panda_project/code/mmdetection-master后再运行，
 否则相对路径会报错！
 ###################################
 
