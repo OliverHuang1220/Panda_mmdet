@@ -34,6 +34,8 @@ RESULT_PATH = '../../prediction_result/'  # 保存结果路径
 运行的配置文件为 ./cascade_rcnn50_dcn_test/cascade_rcnn_r50_fpn_dconv_c3-c5_1x_coco.py
 加载的训练好的四个类别的模型位于 ./checkpoints/cascade_rcnn50_dcn_giou_pth
 
-
+## Result
+RankB|Score |Rank
+       0.534 34
 ## Acknowlegement
 This repo obtained from [MMdet](https://github.com/open-mmlab/mmdetection) and [Pand-Toolkit](https://github.com/GigaVision/PANDA-Toolkit)
