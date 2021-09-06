@@ -1,28 +1,5 @@
-# Installation
-1. Environment: **Python 3**
-2. Get PANDA from [download page](http://www.panda-dataset.com/Download.html)
-3. Install dependencies
-```
-    pip install -r requirements.txt
-```
-
-4. We use MMDetection to train baseline model, please refer to [this page](https://github.com/open-mmlab/mmdetection) for installation and usage
-
-
-
-# Train on PANDA-IMAGE with MMDetection
-
-In this note, you will know how to finetune faster rcnn model with PANDA-IMAGE dataset. 
-
-The basic steps are as below:
-
-1. Prepare the customized dataset
-2. Prepare config files
-3. Download COCO pre-trained model
-4. Train on the PANDA IMAGE dataset
-
 ## Prepare the PANDA-IMAGE dataset
-We need to reorganize the dataset into COCO format. Please refer to `Task1_utils.py`.
+First step is reorganize the dataset into COCO format. Please refer to `Task1_utils.py`.
 
 ## Prepare config files of MMDetection
 
@@ -218,38 +195,3 @@ model = dict(
     ))
 
 ```
-
-The **third config** need to be modified is the file `configs/_base_/default_runtime.py`, you need to set the key  **load_from** as `'./checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'`
-
-## Download COCO pre-trained model
-
-Download  COCO pre-trained model from [here](http://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_fpn_1x_coco/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth) and put it to `checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth`.
-
-## Train a new model
-
-To train a model with the new config, you can simply run
-
-```shell
-python tools/train.py python tools/train.py configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py [optional arguments]
-```
-
-For more detailed usages, please refer to the [Case 1](https://github.com/open-mmlab/mmdetection/blob/master/docs/1_exist_data_model.md).
-
-
-# Baseline results
-
-| Matrices                | Details                                           | Score |
-| ----------------------- | ------------------------------------------------- | ----- |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.279 |
-| Average Precision  (AP) | @[ IoU=0.50    \| area =  all \| maxDets=500 ]    | 0.492 |
-| Average Precision  (AP) | @[ IoU=0.75    \| area =  all \| maxDets=500 ]    | 0.281 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.310 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.318 |
-| Average Precision  (AP) | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.110 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets= 10 ]  | 0.045 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=100 ]  | 0.223 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =  all \| maxDets=500 ]  | 0.350 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = small \| maxDets=500 ] | 0.394 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area =medium \| maxDets=500 ] | 0.374 |
-| Average Recall   (AR)   | @[ IoU=0.50:0.95 \| area = large \| maxDets=500 ] | 0.146 |
-
