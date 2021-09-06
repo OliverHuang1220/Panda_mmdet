@@ -6,7 +6,10 @@ First step is reorganize the dataset into COCO format. Please refer to `Task1_ut
 The second step is to prepare config files thus the dataset could be successfully loaded. Assume that we want to use Faster R-CNN, the config to train the detector on PANDA IMAGE dataset is as below. 
 
 The **first config** need to be overwritten is the file `configs/_base_/datasets/coco_detection.py`, the config is as below.
+We train only one category of box during one training process.
 
+- Change the **CATE_ID** in the above config to select target category for training
+- Change the **data_root** and the **anno_root** to your training data path
 ```python
 CATE_ID = '1'
 
@@ -69,12 +72,7 @@ data = dict(
         img_prefix=data_root + 'image_train',
         pipeline=test_pipeline))
 evaluation = dict(interval=1, metric='bbox')
-
-We train only one category of box during one training process.
-
-- Change the **CATE_ID** in the above config to select target category for training
-- Change the **data_root** and the **anno_root** to your training data path
-
+```
 The **second config** need to be overwritten is the file `configs/_base_/models/faster_rcnn_r50_fpn.py`, the config is as below.
 
 ```python
